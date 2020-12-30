@@ -1,0 +1,61 @@
+<section>
+    <div [hidden]="!localStorageData">
+        <h1>Table 1 - Local Storage Data</h1>
+        <mat-table [dataSource]="localStorageData" class="center">
+            <ng-container matColumnDef="passengerName">
+                <mat-header-cell *matHeaderCellDef>Passenger Name</mat-header-cell>
+                <mat-cell *matCellDef="let flight"> {{flight.passengerName}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="bookingId">
+                <mat-header-cell *matHeaderCellDef> Booking ID </mat-header-cell>
+                <mat-cell *matCellDef="let flight"> {{flight.bookingId}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="noOfTickets">
+                <mat-header-cell *matHeaderCellDef> No of Tickets </mat-header-cell>
+                <mat-cell *matCellDef="let flight"> {{flight.noOfTickets}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="amount">
+                <mat-header-cell *matHeaderCellDef> Amount </mat-header-cell>
+                <mat-cell *matCellDef="let flight"> {{flight.amount | currency:'USD'}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="delete">
+                <mat-header-cell *matHeaderCellDef> Delete </mat-header-cell>
+                <mat-cell *matCellDef="let flight">
+                    <button (click)="deleteLocalStorageData(flight.bookingId)">Delete</button>
+                </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+    </div>
+    <div [hidden]="!localJSONData">
+        <h1>Table 2 - Local JSON data</h1>
+
+        <mat-table [dataSource]="localJSONData" class="center">
+            <ng-container matColumnDef="passengerName">
+                <mat-header-cell *matHeaderCellDef>Passenger Name</mat-header-cell>
+                <mat-cell *matCellDef="let flight"> {{flight.passengerName}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="bookingId">
+                <mat-header-cell *matHeaderCellDef> Booking ID </mat-header-cell>
+                <mat-cell *matCellDef="let flight"> {{flight.bookingId}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="noOfTickets">
+                <mat-header-cell *matHeaderCellDef> No of Tickets </mat-header-cell>
+                <mat-cell *matCellDef="let flight"> {{flight.noOfTickets}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="amount">
+                <mat-header-cell *matHeaderCellDef> Amount </mat-header-cell>
+                <mat-cell *matCellDef="let flight"> {{flight.amount | currency:'USD'}} </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="delete">
+                <mat-header-cell *matHeaderCellDef> Delete </mat-header-cell>
+                <mat-cell *matCellDef="let flight">
+                    <button (click)="deleteLocalJSONData(flight.bookingId)">Delete</button>
+                </mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+    </div>
+</section>

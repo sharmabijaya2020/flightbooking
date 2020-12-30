@@ -1,0 +1,17 @@
+.home {
+    width: 100%;
+    height: 100%;
+    background-image: url("src/assets/img/flight.jpg");
+}
+
+.welcome {
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.info {
+    color: white;
+    text-align: left;
+    padding: 30px;
+}

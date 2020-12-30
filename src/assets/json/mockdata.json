@@ -1,0 +1,25 @@
+[{
+        "passengerName": "Bijaya Sharma",
+        "bookingId": "qw123456",
+        "noOfTickets": 10,
+        "amount": 1500
+    },
+    {
+        "passengerName": "Bijaya Sharma1",
+        "bookingId": "as987654",
+        "noOfTickets": 5,
+        "amount": 750
+    },
+    {
+        "passengerName": "Bijaya Sharma2",
+        "bookingId": "zx234567",
+        "noOfTickets": 1,
+        "amount": 150
+    },
+    {
+        "passengerName": "Bijaya Sharma3",
+        "bookingId": "mn345678",
+        "noOfTickets": 6,
+        "amount": 900
+    }
+]

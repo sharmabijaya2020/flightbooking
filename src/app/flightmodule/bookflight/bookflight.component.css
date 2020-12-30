@@ -1,0 +1,33 @@
+.flightbooking {
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    background-image: url("src/assets/img/flight.jpg");
+    filter: brightness(90%);
+}
+
+.form {
+    border-radius: 5px;
+    /* width: 50%; */
+    background-color: #d0dde0;
+    /*   */
+    opacity: 0.8;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.form>.heading {
+    height: 40px;
+    background-color: #5d7cb4;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.book {
+    margin-bottom: 10px;
+}

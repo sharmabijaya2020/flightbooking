@@ -1,0 +1,48 @@
+<section class="flightbooking">
+    <div>-</div>
+    <div class="form">
+        <p class="heading">Booking the ticket</p>
+
+        <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="5px" [formGroup]="bookingForm" (ngSubmit)="submitForm()">
+            <mat-form-field appearance="outline">
+                <mat-label>Passenger Name</mat-label>
+                <input matInput name="passengerName" type="text" formControlName="passengerName">
+                <!-- <mat-hint>Passenger name should not be a numeric characters</mat-hint> -->
+                <!-- <mat-error>Field required</mat-error> -->
+                <div *ngIf="passengerName.touched && passengerName.invalid">
+                    <mat-error *ngIf="passengerName.errors.required">Field required</mat-error>
+                    <mat-error *ngIf="passengerName.errors.pattern">Numbers are not allowed</mat-error>
+                </div>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>No of Tickets</mat-label>
+                <input matInput name="noOfTickets" type="number" formControlName="noOfTickets" maxlength="8">
+                <!-- <mat-hint>Ticket Number should be greater than 0</mat-hint> -->
+                <div *ngIf="noOfTickets.touched && noOfTickets.invalid">
+                    <mat-error *ngIf="noOfTickets.errors.required">Field required</mat-error>
+                    <mat-error *ngIf="noOfTickets.errors.pattern">Enter number only</mat-error>
+                    <mat-error *ngIf="noOfTickets.errors.minlength">Enter the number of tickets greater than 0
+                    </mat-error>
+                </div>
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Flight ID</mat-label>
+                <input matInput name="flightId" type="text" formControlName="flightId">
+                <!-- <mat-hint>Name should not be a numeric characters</mat-hint> -->
+                <div *ngIf="flightId.touched && flightId.invalid">
+                    <mat-error *ngIf="flightId.errors.required">flightID is required</mat-error>
+                    <mat-error *ngIf="flightId.errors.minlength">Minimum length should be {{flightId.errors.minlength.requiredLength}} characters</mat-error>
+                    <mat-error *ngIf="flightId.errors.maxlength">Mximum length should be {{flightId.errors.maxlength.requiredLength}} characters</mat-error>
+                    <!-- <mat-error *ngIf="flightId.errors.pattern">First two digits should be alphabet</mat-error> -->
+                </div>
+            </mat-form-field>
+            <button class="book" mat-raised-button color="primary" [disabled]="bookingForm.invalid">Book</button>
+        </form>
+        <!-- <button (click)="getData()">Get Data</button>
+        <button (click)="deleteData()">Delete Data</button> -->
+
+    </div>
+</section>
