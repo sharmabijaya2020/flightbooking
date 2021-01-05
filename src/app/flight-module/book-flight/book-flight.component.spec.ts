@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BookflightComponent } from './bookflight.component';
+import { BookflightComponent } from './book-flight.component';
 
 describe('BookflightComponent', () => {
   let component: BookflightComponent;

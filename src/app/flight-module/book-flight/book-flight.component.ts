@@ -2,15 +2,15 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 
-import { FlightDetailsService } from '../flightdetails.service';
-import { FlightDetails } from '../flightdetails.interface';
+import { FlightDetailsService } from '../flight-details.service';
+import { FlightDetails } from '../flight-details.interface';
 
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bookflight',
-  templateUrl: './bookflight.component.html',
-  styleUrls: ['./bookflight.component.css']
+  templateUrl: './book-flight.component.html',
+  styleUrls: ['./book-flight.component.css']
 })
 export class BookflightComponent implements OnInit {
 

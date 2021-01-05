@@ -1,13 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { FlightDetails } from '../flightdetails.interface';
+import { FlightDetails } from '../flight-details.interface';
 import { Subscription } from 'rxjs';
-import { FlightDetailsService } from '../flightdetails.service';
+import { FlightDetailsService } from '../flight-details.service';
 
 @Component({
   selector: 'app-viewdetails',
-  templateUrl: './viewdetails.component.html',
-  styleUrls: ['./viewdetails.component.css']
+  templateUrl: './view-details.component.html',
+  styleUrls: ['./view-details.component.css']
 })
 export class ViewdetailsComponent implements OnInit, OnDestroy {
 

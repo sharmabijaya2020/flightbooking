@@ -2,13 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { BookflightComponent } from './bookflight/bookflight.component';
-import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
-import { AngularmaterialmoduleModule } from '../angularmaterialmodule/angularmaterialmodule.module';
+import { BookflightComponent } from './book-flight/book-flight.component';
+import { ViewdetailsComponent } from './view-details/view-details.component';
+import { AngularmaterialmoduleModule } from '../angular-material-module/angular-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FlightDetailsService } from './flightdetails.service';
-import { CustomHttpInterceptor } from '../httpinterceptor';
+import { FlightDetailsService } from './flight-details.service';
+import { CustomHttpInterceptor } from '../http-interceptor';
 
 
 

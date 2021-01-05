@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router'
-import { BookflightComponent } from './bookflight/bookflight.component';
-import { ViewdetailsComponent } from './viewdetails/viewdetails.component';
+import { BookflightComponent } from './book-flight/book-flight.component';
+import { ViewdetailsComponent } from './view-details/view-details.component';
 
 const routes: Routes = [
     { path: "bookflight", component: BookflightComponent },

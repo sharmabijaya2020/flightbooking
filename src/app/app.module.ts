@@ -8,10 +8,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { FlightmoduleModule } from './flightmodule/flightmodule.module';
+import { FlightmoduleModule } from './flight-module/flight-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularmaterialmoduleModule } from './angularmaterialmodule/angularmaterialmodule.module';
-import { FlightBookingRoutingModule } from './flightmodule/booking-routing.module';
+import { AngularmaterialmoduleModule } from './angular-material-module/angular-material.module';
+import { FlightBookingRoutingModule } from './flight-module/booking-routing.module';
 import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
