@@ -36,13 +36,10 @@
                     <mat-error *ngIf="flightId.errors.required">flightID is required</mat-error>
                     <mat-error *ngIf="flightId.errors.minlength">Minimum length should be {{flightId.errors.minlength.requiredLength}} characters</mat-error>
                     <mat-error *ngIf="flightId.errors.maxlength">Mximum length should be {{flightId.errors.maxlength.requiredLength}} characters</mat-error>
-                    <!-- <mat-error *ngIf="flightId.errors.pattern">First two digits should be alphabet</mat-error> -->
+                    <mat-error *ngIf="flightId.errors.pattern">First two digits should be alphabet</mat-error>
                 </div>
             </mat-form-field>
             <button class="book" mat-raised-button color="primary" [disabled]="bookingForm.invalid">Book</button>
         </form>
-        <!-- <button (click)="getData()">Get Data</button>
-        <button (click)="deleteData()">Delete Data</button> -->
-
     </div>
 </section>

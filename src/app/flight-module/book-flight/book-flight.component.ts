@@ -45,8 +45,7 @@ export class BookflightComponent implements OnInit {
               Validators.required,
               Validators.minLength(6),
               Validators.maxLength(8),
-              // Validators.pattern("/^[^a-zA-Z]{2}[a-zA-Z0-9]{6,8}+$/")
-              // Validators.pattern("/\b[a-zA-Z]{2}[0-9]{4,6}\b/")
+              Validators.pattern('^[a-zA-Z]{2}[a-zA-Z0-9]{4,6}$')
             ]
           })
       }
@@ -65,6 +64,10 @@ export class BookflightComponent implements OnInit {
 
   get flightId() {
     return this.bookingForm.get("flightId");
+  }
+
+  flightIdValidators(c: FormControl) {
+    console.log(c);
   }
 
   submitForm() {
